@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "updating qabot..."
+rsync -avr --delete --exclude-from='./rsync-exclude.txt' ./ qabot:/home/behnam/prod/qabot/src
+
+# echo "updating qabot..."
+# rsync -avr --exclude-from='./rsync-exclude.txt' ./ mci:/home/ubuntu/qabot --delete

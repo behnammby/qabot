@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "getting from qabot prod..."
+rsync -avr --delete --exclude-from='./rsync-exclude.txt' qabot:/home/behnam/prod/qabot/src/ ./

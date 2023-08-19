@@ -1,0 +1,5 @@
+#!/bin/bash
+
+process_id=$(ps ax | grep 'uvicorn --reload' | grep -v grep | awk '{print $1}')
+
+kill $process_id

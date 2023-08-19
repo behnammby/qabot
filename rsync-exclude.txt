@@ -1,0 +1,7 @@
+.git
+__pycache__
+update
+update_prod
+data
+get
+get_prod

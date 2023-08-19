@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python3 /home/ubuntu/qa_bot/crawl_website.py 50 /home/ubuntu/pages

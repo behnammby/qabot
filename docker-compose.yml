@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  aibaazarapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - ml_config_name=aibaazar
+    volumes:
+      - ./data:/code/data
+      - ./templates:/code/templates
+      - ./configs:/code/configs
+    ports:
+      - 9095:9095
+
+  hamrahapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - ml_config_name=hamrah
+    volumes:
+      - ./data:/code/data
+      - ./templates:/code/templates
+      - ./configs:/code/configs
+    ports:
+      - 9094:9095
+
+  barexpapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - ml_config_name=barexp
+    volumes:
+      - ./data:/code/data
+      - ./templates:/code/templates
+      - ./configs:/code/configs
+    ports:
+      - 9093:9095
